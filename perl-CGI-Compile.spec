@@ -8,13 +8,13 @@
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
 #Summary(pl.UTF-8):	
 Name:		perl-CGI-Compile
-Version:	0.14
+Version:	0.15
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CGI/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0b909be1a6238aaa283f0fe0e8018a2e
+# Source0-md5:	2fcf4bc473107130229f4e0a98c756ce
 # generic URL, check or change before uncommenting
 #URL:		http://search.cpan.org/dist/CGI-Compile/
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -32,10 +32,8 @@ CGI::Compile is an utility to compile CGI scripts into a code
 reference that can run many times on its own namespace, as long as the
 script is ready to run on a persistent environment.
 
-NOTE: for best results, load CGI::Compile before any modules used by your
-CGIs.
-
-
+NOTE: for best results, load CGI::Compile before any modules used by
+your CGIs.
 
 # %description -l pl.UTF-8
 # TODO
