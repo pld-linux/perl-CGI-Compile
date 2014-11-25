@@ -1,12 +1,11 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
+
 %define		pdir	CGI
 %define		pnam	Compile
 %include	/usr/lib/rpm/macros.perl
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
-#Summary(pl.UTF-8):	
 Name:		perl-CGI-Compile
 Version:	0.15
 Release:	1
@@ -15,8 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CGI/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	2fcf4bc473107130229f4e0a98c756ce
-# generic URL, check or change before uncommenting
-#URL:		http://search.cpan.org/dist/CGI-Compile/
+URL:		http://search.cpan.org/dist/CGI-Compile/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -34,9 +32,6 @@ script is ready to run on a persistent environment.
 
 NOTE: for best results, load CGI::Compile before any modules used by
 your CGIs.
-
-# %description -l pl.UTF-8
-# TODO
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
