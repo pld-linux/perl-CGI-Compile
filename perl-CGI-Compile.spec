@@ -7,13 +7,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
 Name:		perl-CGI-Compile
-Version:	0.15
+Version:	0.22
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CGI/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2fcf4bc473107130229f4e0a98c756ce
+# Source0-md5:	a6b364e8f3eb45f63d69ae6d5602eb21
 URL:		http://search.cpan.org/dist/CGI-Compile/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -37,17 +37,17 @@ your CGIs.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
-%{__make}
+%{__perl} Build.PL \
+        --destdir=$RPM_BUILD_ROOT \
+        --installdirs=vendor
+./Build
 
-%{?with_tests:%{__make} test}
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} pure_install \
-	DESTDIR=$RPM_BUILD_ROOT
+./Build install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
