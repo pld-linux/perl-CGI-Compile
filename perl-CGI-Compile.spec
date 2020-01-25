@@ -4,7 +4,6 @@
 
 %define		pdir	CGI
 %define		pnam	Compile
-%include	/usr/lib/rpm/macros.perl
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
 Name:		perl-CGI-Compile
 Version:	0.22
