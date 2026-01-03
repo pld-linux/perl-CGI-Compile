@@ -6,14 +6,14 @@
 %define		pnam	Compile
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
 Name:		perl-CGI-Compile
-Version:	0.22
+Version:	0.27
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/CGI/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a6b364e8f3eb45f63d69ae6d5602eb21
-URL:		http://search.cpan.org/dist/CGI-Compile/
+Source0:	https://www.cpan.org/modules/by-module/CGI/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	c96eab6c8b7acc8f9950b8503e9c8e04
+URL:		https://search.cpan.org/dist/CGI-Compile/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
