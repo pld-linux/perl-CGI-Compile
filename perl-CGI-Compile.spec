@@ -7,7 +7,7 @@
 Summary:	CGI::Compile - Compile .cgi scripts to a code reference like ModPerl::Registry
 Name:		perl-CGI-Compile
 Version:	0.27
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
